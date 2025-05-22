@@ -7,6 +7,13 @@
         <h1>RESPITE</h1>
         <div></div>
         <p><em>Marquis reads:</em></p>
-        <strong>Now in color!</strong>
+        <p><strong>Now in color!</strong></p>
+        {%for p in posts%}
+            <article>
+                <time>published: {{p.published_date}}</time>
+                <h2><a href="">{{p.title}}</a></h2>
+                <p>{{p.text|linebreaksbr}}</p>
+            </article>
+        {%endfor%}
     </body>
 </html>
